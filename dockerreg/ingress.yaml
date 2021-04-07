@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: docker-registry
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spec:
+  tls:
+  - hosts:
+    - docker.dulik.net
+    secretName: docker-registry-tls-certificate
+  rules:
+  - host: docker.dulik.net
+    http:
+      paths:
+      - backend:
+          serviceName: docker-registry
+          servicePort: 5000

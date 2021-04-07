@@ -1,0 +1,14 @@
+nextcloud:
+    host: cloud.dulik.net
+    username: adminperson
+    password: thisisnotmypassword
+mariadb:
+    enabled: true
+    db:
+        name: nextcloud
+        user: nextcloud
+        password: supersecret
+    persistence:
+        enabled: true
+        accessMode: ReadWriteOnce
+        size: 8Gi
