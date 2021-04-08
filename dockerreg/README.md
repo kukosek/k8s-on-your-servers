@@ -11,7 +11,7 @@ the helm chart of the Docker registry using helm.
 
 2. Publish the docker registry service using an Ingress resource.
 See example in ingress.yaml. You will need to enable HTTPS(TLS), otherwise
-docker will reject your registry. Then `kubectl apply -f install-registry.sh`
+docker will reject your registry. Then `kubectl apply -f ingress.yaml`
 
 3. Try access the URL. It should give a blank page.
 
